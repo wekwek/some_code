@@ -13,11 +13,11 @@ def file_list(dirpath):
 	return num,file_path,file_name
 
 def xrd_graph(num,file_path,file_name):
-	if num%==1:
+	if num%2==1:
 		num=num+1
 	else:
 		pass
-	fig,axes=plt.subplots(2,num/2)
+	fig,axes=plt.subplots(2,int(num/2))
 	for i in range(num):
 		columns=['2Theta','Intensity']
 		data=pd.read_table(file_path[i],sep='\s+',skiprows=31,header=None,names=columns)
