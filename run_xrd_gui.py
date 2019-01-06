@@ -2,6 +2,8 @@ from tkinter import *
 import xrd_graphs
 
 root=Tk()
+root.title('xrd数据可视化')
+root.geometry('300x200')
 
 def func():
 	dirpath=entry.get()
